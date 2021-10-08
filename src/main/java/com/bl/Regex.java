@@ -71,11 +71,28 @@ public class Regex {
 
             }else
             {
-                System.out.println("  No Matched :");
+                System.out.println("  Mobile Number is Not Matched :");
             }
+       }
 
+       public static void password_Min8_Character(){
 
-        }
+        String password="kajalmane";
+        String pattern="[A-Za-z]{8,}";
+
+           Pattern r= Pattern.compile(pattern);
+
+           Matcher m;
+           m = r.matcher(password);
+
+           if(m.matches()){
+               System.out.println(" Password is Matched :" );
+
+           }else
+           {
+               System.out.println(" Password is  Not Matched :");
+           }
+       }
 
 
     public static void main(String[] args){
@@ -89,8 +106,9 @@ public class Regex {
         System.out.println();
         email();
         System.out.println();
-
         mobileNumber();
+        System.out.println();
+        password_Min8_Character();
 
     }
 }
