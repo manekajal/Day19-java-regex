@@ -56,6 +56,24 @@ public class Regex {
             {
                 System.out.println("email  No Matched :");
             }
+        }
+        public static void mobileNumber()
+        {
+            String str= "91 9765326068";
+            String pattern = "(0/91)?[7-9][0-9]{10,18}";
+            Pattern r= Pattern.compile(pattern);
+
+            Matcher m;
+            m = r.matcher(str);
+
+            if(m.matches()){
+                System.out.println(" Mobile Number is Matched :" );
+
+            }else
+            {
+                System.out.println("  No Matched :");
+            }
+
 
         }
 
@@ -66,8 +84,13 @@ public class Regex {
         System.out.println();
 
         firstName();
+        System.out.println();
         lastName();
+        System.out.println();
         email();
+        System.out.println();
+
+        mobileNumber();
 
     }
 }
