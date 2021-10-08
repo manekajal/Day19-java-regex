@@ -77,8 +77,8 @@ public class Regex {
 
        public static void password_Min8_Character(){
 
-        String password="kajalmane";
-        String pattern="[A-Za-z]{8,}";
+        String password="Kajalmane";
+        String pattern="(?=.*?[A-Z])[A-za-z]{8,}";
 
            Pattern r= Pattern.compile(pattern);
 
