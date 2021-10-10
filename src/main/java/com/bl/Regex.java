@@ -59,8 +59,8 @@ public class Regex {
         }
         public static void mobileNumber()
         {
-            String str= "91 9765326068";
-            String pattern = "(0/91)?[7-9][0-9]{10,18}";
+            String str= "91-9765326068";
+            String pattern = "^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[789]\\d{9}$";
             Pattern r= Pattern.compile(pattern);
 
             Matcher m;
@@ -75,10 +75,10 @@ public class Regex {
             }
        }
 
-       public static void password_Min8_Character(){
+       public static void password(){
 
-        String password="Kajalmane";
-        String pattern="(?=.*?[A-Z])[A-za-z]{8,}";
+        String password="Kajalmane0";
+        String pattern="(?=.*?[A-Z])(?=.*?[0-9])[A-Za-z]{8,}";
 
            Pattern r= Pattern.compile(pattern);
 
@@ -108,7 +108,7 @@ public class Regex {
         System.out.println();
         mobileNumber();
         System.out.println();
-        password_Min8_Character();
+        password();
 
     }
 }
