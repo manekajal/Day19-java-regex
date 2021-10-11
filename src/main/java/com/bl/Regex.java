@@ -7,7 +7,7 @@ public class Regex {
     public static void firstName(){
         String firstName="Kaj";
 
-        String pattern= "^[A-z]{3}";
+        String pattern= "^[A-z]{3,}";
         Pattern r= Pattern.compile(pattern);
 
         Matcher m = r.matcher(firstName);
@@ -26,7 +26,7 @@ public class Regex {
 
             String lastName="kaj";
 
-            String pattern= "^[A-z]{3}";
+            String pattern= "^[A-z]{3,}";
             Pattern r= Pattern.compile(pattern);
 
             Matcher m = r.matcher(lastName);
